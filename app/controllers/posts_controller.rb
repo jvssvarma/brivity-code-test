@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order("created_at DESC")
   end
 
   def new
@@ -21,6 +21,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @comments = @post.comments.all.order("created_at ASC")
   end
 
   def edit

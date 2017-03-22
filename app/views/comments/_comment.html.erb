@@ -1,0 +1,9 @@
+<% @comments.each do |comment| %>
+  <div class="well">
+    <p><b><%= comment.user.full_name %></b></p>
+    <p><%= comment.body %></p>
+    <% if current_user %>
+      <%= link_to "Delete", [comment.post, comment], method: :delete, data: {confirm: "Are you sure?"}, id: "comment_#{comment.id}", class: "btn btn-danger" if policy(comment).destroy? %>
+    <% end %>
+  </div>
+<% end %>
