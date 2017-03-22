@@ -8,6 +8,6 @@ class User < ActiveRecord::Base
   validates_presence_of :first_name, :last_name
 
   def full_name
-    first_name.capitalize + " " + last_name.capitalize
+    first_name.capitalize+' '+last_name.capitalize
   end
 end
