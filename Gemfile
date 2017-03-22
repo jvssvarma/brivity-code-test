@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise', '~> 4.2', '>= 4.2.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'gritter', '~> 1.2'
 
 
 group :development, :test do
