@@ -21,7 +21,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @comments = @post.comments.all.order("created_at ASC")
+    @comments = @post.comments.all.order("created_at ASC").page(params[:page]).per(5)
   end
 
   def edit
