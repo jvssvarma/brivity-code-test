@@ -53,7 +53,7 @@ describe 'navigate' do
 
   describe "edit posts" do
     before do
-      @post = Post.create(title: "hello1 Mister", body: "1 A full body test for health check")
+      @post = Post.create(title: "hello1 Mister", body: "1 A full body test for health check", user_id: @user.id)
     end
 
     it "must have the post content" do
@@ -67,7 +67,7 @@ describe 'navigate' do
 
   describe "delete posts" do
     before do
-      @post = Post.create(title: "hello1 Mister", body: "1 A full body test for health check")
+      @post = Post.create(title: "hello1 Mister", body: "1 A full body test for health check", user_id: @user.id)
     end
 
     it "must allow the user to delete posts" do
